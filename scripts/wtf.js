@@ -13,7 +13,7 @@ var WTF = (function() {
 
     var RE_QUOTE = /\"([^\"]+)\"/gi;
     var RE_JSON = /\.json$/i;
-    var RE_KEY = /[a-z0-9]{32,}/i;
+    var RE_KEY = /[a-z0-9_-]{32,}/i;
     var DOCS_PATH = 'https://docs.google.com/spreadsheet/pub?key={key}&output=csv';
 
     var templates;
@@ -238,6 +238,7 @@ var WTF = (function() {
         */
 
         init: function( data ) {
+            console.log(data);
 
             if ( !data ) throw data + ' is not a valid corpus';
 
